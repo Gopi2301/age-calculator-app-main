@@ -119,10 +119,6 @@ body {
     line-height: 1;
 }
 
-/* .card__output {
-    margin-block: var(--size-300);
-} */
-
 .card__output span {
     color: var(--clr-accent-400);
 }
@@ -150,7 +146,6 @@ body {
     top: 50%;
     transform: translateY(-50%);
     padding: var(--size-400);
-    /* transform: translateY(-50%); */
     background-color: var(--clr-accent-400);
     border-radius: 100vh;
 
