@@ -21,6 +21,36 @@
 
 }
 
+@font-face {
+    font-family: poppins-bold;
+    src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: poppins-bold-i;
+    src: url(../assets/fonts/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: poppins-extraBold;
+    src: url(../assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: poppins-extraBold-i;
+    src: url(../assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: poppins-i;
+    src: url(../assets/fonts/Poppins-Italic.ttf);
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
 body {
     background: var(--clr-neutral-500);
     font-family: 'Poppins', sans-serif;
@@ -39,7 +69,7 @@ body {
 }
 
 .container {
-    padding: var(--size-500);
+    padding-inline: var(--size-600);
 }
 
 .card * {
@@ -62,6 +92,20 @@ body {
     gap: var(--size-400);
 }
 
+.form__inputs input {
+    width: 150px;
+    height: 50px;
+    border: 1px solid var(--clr-neutral-500)
+}
+
+.form__inputs input::placeholder {
+    color: var(--clr-neutral-700);
+    font-family: poppins-extraBold;
+    font-size: var(--size-500);
+    outline: transparent;
+    padding: var(--size-400);
+}
+
 .display-col {
     display: flex;
     flex-direction: column;
@@ -69,11 +113,45 @@ body {
 }
 
 .fw-bold {
-    font-weight: 800;
+    font-family: poppins-extraBold-i;
     font-size: var(--size-700);
     margin-block: var(--size-200);
+    line-height: 1;
 }
+
+/* .card__output {
+    margin-block: var(--size-300);
+} */
 
 .card__output span {
     color: var(--clr-accent-400);
+}
+
+.form__inputs {
+    font-family: poppins-bold;
+    color: var(--clr-neutral-700)
+}
+
+.divider {
+    display: block;
+    position: relative;
+
+}
+
+.divider hr {
+    background: transparent;
+    border: 1px solid var(--clr-neutral-300);
+}
+
+.arrow-img {
+    position: absolute;
+    width: 40px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: var(--size-400);
+    /* transform: translateY(-50%); */
+    background-color: var(--clr-accent-400);
+    border-radius: 100vh;
+
 }
