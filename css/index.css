@@ -1,0 +1,79 @@
+:root {
+    --size-200: .5rem;
+    --size-300: .75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 4rem;
+    --size-900: 5rem;
+
+    --clr-accent-400: hsl(260, 100%, 65%);
+    --clr-font-400: hsl(0, 0%, 54%);
+    --clr-font-900: hsl(0, 0%, 8%);
+    --clr-primary-400: hsl(259, 100%, 65%);
+    --clr-primary-900: hsl(0, 100%, 67%);
+    --clr-neutral-300: hsl(0, 0%, 94%);
+    --clr-neutral-400: hsl(0, 0%, 100%);
+    --clr-neutral-500: hsl(0, 0%, 86%);
+    --clr-neutral-700: hsl(0, 1%, 44%);
+    --clr-dark-900: hsl(0, 0%, 8%);
+
+
+}
+
+body {
+    background: var(--clr-neutral-500);
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--clr-neutral-400);
+    --max-width: 800px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - var(--padding)*2);
+    border-radius: 1rem 1rem 10rem 1rem;
+}
+
+.container {
+    padding: var(--size-500);
+}
+
+.card * {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__form {
+    padding: var(--size-500);
+}
+
+.card__form * {
+    display: flex;
+    gap: var(--size-600);
+}
+
+.form__inputs * {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-400);
+}
+
+.display-col {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fw-bold {
+    font-weight: 800;
+    font-size: var(--size-700);
+    margin-block: var(--size-200);
+}
+
+.card__output span {
+    color: var(--clr-accent-400);
+}
