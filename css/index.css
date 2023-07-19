@@ -62,7 +62,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background: var(--clr-neutral-400);
-    --max-width: 800px;
+    --max-width: 750px;
     --padding: 1rem;
     width: min(var(--max-width), 100% - var(--padding)*2);
     border-radius: 1rem 1rem 10rem 1rem;
@@ -72,7 +72,7 @@ body {
     padding-inline: var(--size-600);
 }
 
-.card * {
+.card>* {
     display: flex;
     flex-direction: row;
 }
@@ -81,7 +81,7 @@ body {
     padding: var(--size-500);
 }
 
-.card__form * {
+.form__inputs {
     display: flex;
     gap: var(--size-600);
 }
@@ -104,6 +104,19 @@ body {
     font-size: var(--size-500);
     outline: transparent;
     padding: var(--size-400);
+}
+
+#submit {
+    background: var(--clr-accent-400);
+    border: none;
+    /* width: 40px; */
+    border-radius: 100vh;
+    padding: var(--size-200);
+}
+
+#submit::after {
+    content: url(/assets/images/icon-arrow.svg);
+    width: 40px;
 }
 
 .display-col {
