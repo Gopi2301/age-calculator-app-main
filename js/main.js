@@ -8,21 +8,32 @@ const inputYear = document.getElementById('year');
 const outputDay = document.querySelector('.card__output--day');
 const outputMonth = document.querySelector('.card__output--month');
 const outputYear = document.querySelector('.card__output--year');
-
+const dayLabel = document.querySelectorAll('.label-Day');
 
 
 Button.addEventListener('click', (event) => {
     event.preventDefault();
     let birthday = new Date(0, 0, 0);
     birthday = new Date(inputYear.value, inputMonth.value - 1, inputDay.value);
-    if (birthday < currentDate) {
-        logic(birthday)
-    } else {
-        console.log('error');
-    }
+    outputDay.innerHTML = '--';
+    outputMonth.innerHTML = '--';
+    outputYear.innerHTML = '--';
+    emptyMsg(birthday);
+
 
 });
 
+function emptyMsg(birthday) {
+    dayLabel.forEach(function (element) {
+        if (inputDay.value !== '' && inputMonth.value !== '' && inputYear.value !== '') {
+            element.classList.remove('emptyMsg');
+            logic(birthday);
+        }
+        else {
+            element.classList.add('emptyMsg');
+        }
+    })
+}
 function logic(inputDate) {
     var ageYears = currentDate.getFullYear() - inputDate.getFullYear();
 
@@ -51,5 +62,3 @@ function logic(inputDate) {
     outputYear.innerHTML = ageYears;
     console.log("Age: " + ageYears + " years, " + ageMonths + " months, " + ageDays + " days.");
 }
-
-

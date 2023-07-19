@@ -8,6 +8,7 @@
     --size-900: 5rem;
 
     --clr-accent-400: hsl(260, 100%, 65%);
+    --clr-accent-900: hsl(0, 100%, 67%);
     --clr-font-400: hsl(0, 0%, 54%);
     --clr-font-900: hsl(0, 0%, 8%);
     --clr-primary-400: hsl(259, 100%, 65%);
@@ -161,5 +162,18 @@ body {
     padding: var(--size-400);
     background-color: var(--clr-accent-400);
     border-radius: 100vh;
+
+}
+
+.emptyMsg {
+    color: var(--clr-accent-900);
+
+}
+
+.emptyMsg::after {
+    content: "This field is required";
+    display: inline-block;
+    font-family: poppins;
+    font-size: var(--size-300);
 
 }
